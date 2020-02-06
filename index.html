@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Oma CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Chivo' rel='stylesheet'>
+    <script>
+            $(".nav a").on("click", function(){
+                $(".navbar-toggler").click();
+            });
+        </script>
+    <title>Path of Exile -projekti</title>
+  </head>
+  <body onload="LoadInitialContent()">
+    <!--NAVBAR-->
+    <nav class="navbar navbar-dark navbar-expand-lg justify-content-center fixed-top">
+        <a href="#" onclick="LoadInitialContent()" class="navbar-brand d-flex w-50 mr-auto">Path Of Exile -projekti</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse w-100" id="collNavbar">
+            <ul class="navbar-nav w-100 justify-content-center">
+                    <li class="nav-item" id="navitem">
+                        <a class="nav-link" id="navitem" href="#" onclick="textChange(0)">Tietoa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="textChange(1)">Uutiset</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="textChange(2)">Resurssit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="textChange(3)">ARPG Pelejä</a>
+                    </li>
+
+            </ul>
+            <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+                    <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="textChange(4)">Yhteydenotto</a>
+                        </li>
+            </ul>
+        </div>
+    </nav>
+    <!--/NAVBAR-->
+
+    <!--SISÄLTÖ -->
+
+    <div class="container-fluid" id="content">
+        
+    </div>
+    
+    <!--/SISÄLTÖ -->
+
+
+<!--JAVASCRIPT-->
+
+
+<script>
+
+    var textChange = function(i) {
+        if (i == 0)
+        {
+            document.getElementById("content").innerHTML = tietoaHTML;
+        }
+        else if (i == 1)
+        {
+            document.getElementById("content").innerHTML = uutisetHTML;
+        }
+        else if (i == 2)
+        {
+            document.getElementById("content").innerHTML = resurssitHTML;
+        }
+        else if (i == 3)
+        {
+            document.getElementById("content").innerHTML = arpgHTML;
+        }
+        else if (i == 4)
+        {
+            document.getElementById("content").innerHTML = yhtHTML;
+        }
+    };
+
+
+
+    
+var indexHTML = "<img src=\"Kuvat/etusivu_logo.png\" class=\"img-fluid\" id=\"header_logo\">\
+        <div class=\"container kortit\" id=\"container_kortit\">\
+            <h1 class=\"text-center\">\TERVETULOA</h1>\
+            <p class=\"text-center\">\Alla on katsaus sivuston sisällöstä. Voit siirtyä haluamaasi osaan tämän sivun kuvakkeilla tai sivuston navigointipalkilla.</p>\
+            <div class=\"row\">\
+                <div class=\"card mx-auto\" style=\"width: 25rem;\">\
+                    <a href=\"#\" onclick=\"textChange(0)\" id=\"korttikuvake\">\
+                        <img class=\"card-img-top\" src=\"Kuvat/tietoa_logo.png\" alt=\"Card image cap\">\
+                    </a>\
+                   <div class=\"card-header\">\Tietoa</div>\
+                    <div class=\"card-body\">\
+                        <p class=\"card-text\">\Path of Exile on alun perin virallisesti vuonna 2013 julkaistu ARPG genren ilmaispeli. Peli on viime vuosina noussut kulttisuosikin roolista myös valtavirtapelaajien suosioon.</p>\
+                        <a href=\"#\" onclick=\"textChange(0)\" class=\"card-link\">\Lue lisää</a>\
+</div>\
+                </div>\
+                <div class=\"card mx-auto\" style=\"width: 25rem;\">\
+                    <a href=\"#\" onclick=\"textChange(1)\" id=\"korttikuvake\">\
+                        <img class=\"card-img-top\" src=\"Kuvat/uutiset_logo.png\" alt=\"Card image cap\">\
+                    </a>\
+                    <div class=\"card-header\">\Uutiset</div>\
+                    <div class=\"card-body\">\
+                        <p class=\"card-text\">\Path of Exileä päivitetään jatkuvasti. Täältä löydät uutisia, joiden avulla pysyt ajan tasalla.</p>\
+                        <a href=\"#\" onclick=\"textChange(1)\" class=\"card-link\">\Lue lisää</a>\
+                    </div>\
+                </div>\
+                <div class=\"card mx-auto\" style=\"width: 25rem;\">\
+                    <a href=\"#\" onclick=\"textChange(2)\" id=\"korttikuvake\">\
+                        <img class=\"card-img-top\" src=\"Kuvat/resurssit_logo.png\" alt=\"Card image cap\">\
+                    </a>\
+                    <div class=\"card-header\">\
+                        Resurssit</div>\
+                    <div class=\"card-body\">\
+                        <p class=\"card-text\">\Saadaksesi kaiken irti Path of Exilestä, kannattaa tutustua erilaisiin virallisiin ja kolmannen osapuolen tuottamiin resursseihin.</p>\
+                        <a href=\"#\" onclick=\"textChange(2)\" class=\"card-link\">\Lue lisää</a>\
+                    </div>\
+                </div>\
+                <div class=\"card mx-auto\" style=\"width: 25rem;\">\
+                    <a href=\"#\" onclick=\"textChange(3)\" id=\"korttikuvake\">\
+                        <img class=\"card-img-top\" src=\"Kuvat/arpg_logo.png\" alt=\"Card image cap\">\
+                    </a>\
+                    <div class=\"card-header\">\
+                        ARPG genren pelejä</div>\
+                    <div class=\"card-body\">\
+                        <p class=\"card-text\">\Vaikka Path of Exile onkin ARPG genren kuningas, on genressä muitakin hyviä pelejä. Mikäli PoE nappaa, kannattaa testata jotakin tässä osiossa olevista peleistä</p>\
+                        <a href=\"#\" onclick=\"textChange(3)\" class=\"card-link\">\Lue lisää</a>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+        <div class=\"jumbotron jumbotron-fluid alapalkki\">\
+            <div class=\"row\" id=\"some\">\
+                <a href=\"#\" id=\"twitter_logo\">\
+                    <img src=\"Kuvat/alapalkki logot/twitter_harmaa60.png\">\
+                </a>\
+                <a href=\"#\" id=\"yt_logo\">\
+                    <img src=\"Kuvat/alapalkki logot/youtube_harmaa60.png\">\
+                </a>\
+                <a href=\"#\" id=\"fb_logo\">\
+                    <img src=\"Kuvat/alapalkki logot/fb_harmaa60.png\">\
+                </a>\
+            </div>\
+            <div class=\"row\" id=\"tekija\">\
+                <p class=\"text-center\" id=\"tekija\">\© 2019 Miikka Vartiainen</p>\
+            </div>\
+        </div>";
+
+
+
+
+var uutisetHTML = "<img src=\"Kuvat/uutiset_logo.png\" class=\"img-fluid\" id=\"header_logo\">\
+        <div class=\"container-fluid text-center\" id=\"uutiset_otsikko\">\
+            <h2>\Alle on kerätty kokoelma uusia Path of Exileen liittyviä uutisia eri lähteistä.</h2>\
+        </div>\
+        <div class=\"container\">\
+                <div class=\"card\">\
+                    <a href=\"https://www.pathofexile.com/forum/view-thread/2330306\" target=\"_blank\" id=\"korttikuvake\">\
+                        <img class=\"card-img-top img-fluid\" src=\"Kuvat/uutiskortti_otsikkokuva.png\" alt=\"Card image cap\">\
+                    </a>\
+                    <div class=\"card-body\">\
+                        <h5 class=\"card-title\">\Kehittämismanifesto Betrayal-mekaniikasta</h5>\
+                        <p class=\"card-text\">\Uutisessa kuvataan Betrayal-mekaniikan ydinpeliin lisäämisen pääperiaatteet ja syyt.</p>\
+                        <a href=\"https://www.pathofexile.com/forum/view-thread/2330306\" target=\"_blank\" class=\"btn btn-primary\">\Siirry uutiseen</a>\
+                    </div>\
+                </div>\
+                <div class=\"card\">\
+                    <a href=\"https://www.pathofexile.com/forum/view-thread/2329993\" target=\"_blank\" id=\"korttikuvake\">\
+                        <img class=\"card-img-top img-fluid\" src=\"Kuvat/synth_logo.png\" alt=\"Card image cap\">\
+                    </a>\
+                    <div class=\"card-body\">\
+                        <h5 class=\"card-title\">\Malevolence, Zealotry ja muita aura muutoksia</h5>\
+                        <p class=\"card-text\">\Jo aikaisemmin teasereissa näkyneiden Malevolence ja Zealotry -aurojen tiedot on nyt julkaistu. Uutinen sisältää myös muita muutoksia auroihin liittyen.</p>\
+                        <a href=\"https://www.pathofexile.com/forum/view-thread/2329993\" target=\"_blank\" class=\"btn btn-primary\">\Siirry uutiseen</a>\</div>\</div>\
+                <div class=\"card\">\
+                    <a href=\"https://www.pathofexile.com/forum/view-thread/2329613\" target=\"_blank\" id=\"korttikuvake\">\
+                        <img class=\"card-img-top img-fluid\" src=\"Kuvat/synth_logo.png\" alt=\"Card image cap\">\
+                    </a>\
+                    <div class=\"card-body\">\
+                        <h5 class=\"card-title\">\Uusi lisäosa: Synthesis</h5>\
+                        <p class=\"card-text\">\Maaliskuussa julkaistavan Synthesis lisäosan tiedot on nyt julkaistu.</p>\
+                        <a href=\"https://www.pathofexile.com/forum/view-thread/2329613\" target=\"_blank\" class=\"btn btn-primary\">\Siirry uutiseen</a>\
+                    </div>\
+                </div>\
+        </div>\
+            <div class=\"jumbotron jumbotron-fluid alapalkki\">\
+                <div class=\"row\" id=\"some\">\
+                    <a href=\"#\" id=\"twitter_logo\">\
+                        <img src=\"Kuvat/alapalkki logot/twitter_harmaa60.png\">\
+                    </a>\
+                    <a href=\"#\" id=\"yt_logo\">\
+                        <img src=\"Kuvat/alapalkki logot/youtube_harmaa60.png\">\
+                    </a>\
+                    <a href=\"#\" id=\"fb_logo\">\
+                        <img src=\"Kuvat/alapalkki logot/fb_harmaa60.png\">\
+                    </a>\
+                </div>\
+                <div class=\"row\" id=\"tekija\">\
+                    <p class=\"text-center\" id=\"tekija\">\© 2019 Miikka Vartiainen</p>\
+                </div>\
+            </div>";
+	
+var tietoaHTML = "<img src=\"Kuvat/tietoa_logo.png\" class=\"img-fluid\" id=\"header_logo\">\
+        <div class=\"jumbotron jumbotron-fluid\" id=\"tietoa_poe\">\
+                <h1>\Path of Exile</h1>\
+                <p>\Path of Exile on alun perin virallisesti vuonna 2013 Grinding Gear Games:n julkaisema ARPG genren ilmaispeli. \
+                    Aluksi kulttisuosiota nauttinut peli on viiime vuosina noussut myös valtavirtapelaajien tietoisuuteen, etenkin viime kuukausina \
+                    muiden genren pelien pätemättömyyden takia. </p>\
+                <p>\Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, est numquam! Voluptatibus \
+                    voluptatum vel in odio culpa minima, non quia nihil aspernatur est assumenda aliquam dolores tempore quae facere eius dolorem eveniet \
+                    maxime. Mollitia consequuntur alias sequi, doloremque cum ab impedit tempore id facere ad? Consectetur eaque voluptatum minima soluta. \
+                    Esse quia non nisi est architecto impedit dicta dolore quis velit quidem consequatur, optio earum sed culpa magni dolor, ab voluptas quas.\
+                    Quod eius sunt iste consequatur ipsum. </p>\
+                </div>\
+                <div class=\"jumbotron jumbotron-fluid\" id=\"tietoa_historia\">\
+                    <h1>\Historia</h1>\
+                    <p>\Path of Exilen kehitys alkoi vuonna 2007 Uudessa-Seelannissa Chris Wilsonin johtaman studion, Grinding Gear Games:n toimesta. Studio perustettiin \
+                        jo vuonna 2006 tarkoituksena kehittää henkinen seuraaja useita vuosia sitten Blizzardin julkaisemalle suositulle Diablo 2 pelille. \
+                    </p>\
+                    <p>\Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, est numquam! Voluptatibus \
+                        voluptatum vel in odio culpa minima, non quia nihil aspernatur est assumenda aliquam dolores tempore quae facere eius dolorem eveniet  \
+                        maxime. Mollitia consequuntur alias sequi, doloremque cum ab impedit tempore id facere ad? Consectetur eaque voluptatum minima soluta.  \
+                        Esse quia non nisi est architecto impedit dicta dolore quis velit quidem consequatur, optio earum sed culpa magni dolor, ab voluptas quas. \
+                        Quod eius sunt iste consequatur ipsum. </p>\
+                </div>\
+                <div class=\"jumbotron jumbotron-fluid\" id=\"tietoa_miksipelata\">\
+                        <h1>\Miksi pelata Path of Exileä?</h1>\
+                        <p>Path of Exile eroaa suurimmasta osasta genren muista peleistä tarjoamalla haastavan, Diablo 2 -tyylisen pelikokemuksen \
+                        Toisin kuin useat muut free-to-play pelit, ei Path of Exilen rahoitusmalli sisällä pay-to-win mikromaksuja. </p>\
+                        <p>\Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, est numquam! Voluptatibus \
+                            voluptatum vel in odio culpa minima, non quia nihil aspernatur est assumenda aliquam dolores tempore quae facere eius dolorem eveniet  \
+                            maxime. Mollitia consequuntur alias sequi, doloremque cum ab impedit tempore id facere ad? Consectetur eaque voluptatum minima soluta.  \
+                            Esse quia non nisi est architecto impedit dicta dolore quis velit quidem consequatur, optio earum sed culpa magni dolor, ab voluptas quas. \
+                            Quod eius sunt iste consequatur ipsum. </p>\
+                </div>\
+                <div class=\"jumbotron jumbotron-fluid\" id=\"tietoa_lataaminen\">\
+                        <h1>\Pelin lataaminen</h1>\
+                        <p>\Päästäksesi pelaamaan Path of Exileä, tulee sinun ensiksi luoda käyttäjätili Path of Exilen virallisilla sivuilla. Rekisteröinnin jälkeen voit \
+                            ladata pelin samalta sivulta oikeasta yläkulmasta tai vaihtoehtoisesti alta:</p>\
+                </div>\
+                <div class=\"jumbotron jumbotron-fluid\" id=\"tietoa_artikkeleja\">\
+                        <h1>\Artikkeleja</h1>\
+                        <p>\</p>\
+                        <h2>\<a href=\"https://www.pcgamer.com/path-of-exile-review/r\">\PC Gamerin kirjoitettu arvostelu.</a>\</h2>\
+                        <h2>\<a href=\"https://gamedevolution.com/pc/path-of-exile-best-arpg-ever\">\Artikkeli Path of Exilen noususta ARPG genren huipulle.</a>\</h2>\
+                </div>\
+            <div class=\"jumbotron jumbotron-fluid alapalkki\">\
+                <div class=\"row\" id=\"some\">\
+                    <a href=\"#\" id=\"twitter_logo\">\
+                        <img src=\"Kuvat/alapalkki logot/twitter_harmaa60.png\">\
+                    </a>\
+                    <a href=\"#\" id=\"yt_logo\">\
+                        <img src=\"Kuvat/alapalkki logot/youtube_harmaa60.png\">\
+                    </a>\
+                    <a href=\"#\" id=\"fb_logo\">\
+                        <img src=\"Kuvat/alapalkki logot/fb_harmaa60.png\">\
+                    </a>\
+                </div>\
+                <div class=\"row\" id=\"tekija\">\
+                    <p class=\"text-center\" id=\"tekija\">\© 2019 Miikka Vartiainen</p>\
+                </div>\
+            </div>";
+	
+
+var resurssitHTML = "<img src=\"Kuvat/resurssit_logo.png\" class=\"img-fluid\" id=\"header_logo\">\
+        <div class=\"jumbotron jumbotron-fluid\" id=\"resurssit_wiki\">\
+                <h1>\Path of Exile Wiki</h1>\
+                <p>\Path of Exilen monimutkaisuuden takia Wikin tulisi olla jokaisen pelaajan ensimmäinen valinta ongelmien selvittämisessä. Wiki sisältää suunnattoman määrän tietoa \
+                    mekaniikoista, itemeistä sekä paljosta muusta. \
+                </p>\
+                <a class=\"btn btn-primary\" href=\"https://pathofexile.gamepedia.com/Path_of_Exile_Wiki\" target=\"_blank\" role=\"button\">\Siirry sivustolle</a>\
+                </div>\
+                <div class=\"jumbotron jumbotron-fluid\" id=\"resurssit_reddit\">\
+                    <h1>\Path of Exile Reddit</h1>\
+                    <p>\Mikäli Wiki ei anna vastausta kysymykseen tai keskustelu muiden yhteisön jäsenien kanssa kiinnostaa, on PoE:n alireddit oikea paikka... Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum nostrum consectetur rem error facere quisquam velit veniam quibusdam quos soluta! \
+                    </p>\
+<a class=\"btn btn-primary\" href=\"https://www.reddit.com/r/pathofexile/\" target=\"_blank\"  role=\"button\">\Siirry sivustolle</a>\
+                </div>\
+                <div class=\"jumbotron jumbotron-fluid\" id=\"resurssit_virallinen_sivusto\">\
+                        <h1>\Path of Exilen virallinen sivusto</h1>\
+                        <p>\Path of Exilen virallinen sivusto tarjoaa tietoa pelistä, tulevista lisäosista, mikromaksuista sekä paljosta muusta. Sivujen kautta voi luoda ilmaisen  \
+                            käyttäjätilin, jonka jälkeen peliin voi ladata ja pelata. Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sunt debitis ab.  \
+                            Totam accusantium natus voluptates hic ut quos harum. \
+                        </p>\
+                        <a class=\"btn btn-primary\" href=\"https://www.pathofexile.com/game\" target=\"_blank\"  role=\"button\">\Siirry sivustolle</a>\
+                </div>\
+                <div class=\"jumbotron jumbotron-fluid\" id=\"resurssit_virallinen_trade\">\
+                        <h1>\Path of Exilen virallinen trade sivusto</h1>\
+                        <p>\Virallisen trade sivuston kautta pelaajat voivat ottaa yhteyttä toisiinsa ja vaihtaa itemeitä keskenään. Viralliselle trade sivustolle on olemassa \
+                            kolmannen osapuolen tuottamia vaihtoehtoja, mutta niiden jatkuvasta ylläpitämisestä ja uusien ominaisuuksien lisäämisestä ei ole takeita. Lorem ipsum  \
+                            dolor sit amet consectetur adipisicing elit. Aperiam dolores sint ipsa debitis maxime id illum! Neque provident laborum omnis. Temporibus ab adipisci ratione. \
+                        </p>\
+                        <a class=\"btn btn-primary\" href=\"https://www.pathofexile.com/trade/search/Betrayal\" target=\"_blank\"  role=\"button\">\Siirry sivustolle</a>\
+                </div>\
+                <div class=\"jumbotron jumbotron-fluid\" id=\"resurssit_poeninja\">\
+                        <h1>\Poe Ninja</h1>\
+                        <p>\Poe.ninja sisältää suuren määrän erilaisia työkaluja. Sivustolla voi esimerkiksi tarkkailla itemien hintamuutoksia tai selata pelaajien buildeja. Lorem ipsum  \
+                            dolor sit amet consectetur adipisicing elit. Aperiam dolores sint ipsa debitis maxime id illum! Neque provident laborum omnis. Temporibus ab adipisci ratione. \
+                        </p>\
+                        <a class=\"btn btn-primary\" href=\"https://poe.ninja/\" target=\"_blank\"  role=\"button\">\Siirry sivustolle</a>\
+                </div>\
+                <div class=\"jumbotron jumbotron-fluid\" id=\"resurssit_poedb\">\
+                        <h1>\PoeDB</h1>\
+                        <p>Vaikka Wiki auttaakin suurimmassa osassa Path of Exileen liittyvissä kysymyksissä, saattaa välillä tulla tarve tarkemmalle tiedolle. \
+                                PoeDB sisältää spesifiä, usein dataminettua tietoa lähes kaikesta mahdollisesta \
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dolores sint ipsa debitis maxime id illum! \
+                                Neque provident laborum omnis. Temporibus ab adipisci ratione. \
+                                </p>\
+                        <a class=\"btn btn-primary\" href=\"https://poedb.tw/us/\" target=\"_blank\"  role=\"button\">\Siirry sivustolle</a>\
+                </div>\
+            <div class=\"jumbotron jumbotron-fluid alapalkki\">\
+                <div class=\"row\" id=\"some\">\
+                    <a href=\"#\" id=\"twitter_logo\">\
+                        <img src=\"Kuvat/alapalkki logot/twitter_harmaa60.png\">\
+                    </a>\
+                    <a href=\"#\" id=\"yt_logo\">\
+                        <img src=\"Kuvat/alapalkki logot/youtube_harmaa60.png\">\
+                    </a>\
+                    <a href=\"#\" id=\"fb_logo\">\
+                        <img src=\"Kuvat/alapalkki logot/fb_harmaa60.png\">\
+                    </a>\
+                </div>\
+                <div class=\"row\" id=\"tekija\">\
+                    <p class=\"text-center\" id=\"tekija\">\© 2019 Miikka Vartiainen</p>\
+                </div>\
+            </div>";
+	
+
+var arpgHTML = "<img src=\"Kuvat/arpg_logo.png\" class=\"img-fluid\" id=\"header_logo\">\
+ <div class=\"jumbotron jumbotron-fluid\" id=\"arpg_d3\">\
+     <h1 class=\"text-center\">\Diablo 3</h1>\
+     <a href=\"https://us.diablo3.com/en/\" target=\"_blank\">\
+         <img src=\"Kuvat/Pelit/D3_RoS_wallpaper.jpg\" class=\"img-fluid mx-auto\" id=\"d3_logo\">\
+     </a>\
+     <p>\</p>\<p>\</p>\
+     <p>\Suositun Diablo 2-pelin seuraaja ja pitkään Path of Exilen kovin kilpailija, Diablo 3 on vuonna 2012 Blizzardin julkaisema \
+         etenkin pelisarjan fanien keskuudessa kiistanalainen tekele. Peli sai heti sen elinkaaren alkuvaiheilla paljon kritiikkiä \
+         sen sisäisestä huutokaupasta, jonka kautta pelaajat pystyivät ostamaan ja myymään pelissä kerättäviä itemeitä oikealla rahalla. \
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi cupiditate voluptatum beatae et ipsam veritatis nemo ad temporibus \
+         molestiae asperiores quo nostrum neque tempore, tenetur fugiat quos illum. Placeat magni repellendus recusandae nemo delectus eaque \
+         voluptatibus libero, dolorem aut ullam. </p>\
+     <div class=\"embed-responsive embed-responsive-16by9\">\
+         <iframe class=\"embed-responsive-item\" src=\"https://player.vimeo.com/video/196937985\" allowfullscreen>\</iframe>\
+     </div>\
+ </div>\
+ <div class=\"jumbotron jumbotron-fluid\" id=\"arpg_gd\">\
+     <h1 class=\"text-center\">\Grim Dawn</h1>\
+     <a href=\"http://www.grimdawn.com/\" target=\"_blank\">\
+         <img src=\"Kuvat/Pelit/GD_wallpaper.jpg\" class=\"img-fluid mx-auto\" id=\"gd_logo\">\
+     </a>\
+     <p>\</p>\<p>\</p>\
+     <p>\Diablo 3:n ja Path of Exilen välimaastoon teemoiltaan, haastavuudeltaan ja mekaniikoiltaan sijoittuva Grim Dawn on Titan Questin henkinen seuraaja \
+         Crate Entertainment -studiolta. Grim Dawn julkaistiin vuonna 2016 ja on sen jälkeen saanut useita maksullisia lisäosia. \
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi cupiditate voluptatum beatae et ipsam veritatis nemo ad temporibus  \
+         molestiae asperiores quo nostrum neque tempore, tenetur fugiat quos illum. Placeat magni repellendus recusandae nemo delectus eaque  \
+         voluptatibus libero, dolorem aut ullam. </p>\
+     <div class=\"embed-responsive embed-responsive-16by9\">\
+             <iframe class=\"embed-responsive-item\" src=\"https://www.youtube.com/embed/GU1ViHjUJF8\" allowfullscreen>\</iframe>\
+         </div>\
+ </div>\
+ <div class=\"jumbotron jumbotron-fluid\" id=\"arpg_wolcen\">\
+     <h1 class=\"text-center\">\Wolcen</h1>\
+     <a href=\"https://wolcengame.com/home/\" target=\"_blank\">\
+         <img src=\"Kuvat/Pelit/Wolcen_wallpaper.jpg\" class=\"img-fluid mx-auto\" id=\"wolcen_logo\">\
+     </a>\
+     <p>\</p>\<p>\</p>\
+     <p>\Wolcen on WOLCEN STUDIOn kehittämä yksi uusimmista ARPG genren markkinoille pyrkivistä peleistä. Peli on kirjoitushetkellä vielä Steamin \
+         Early Access -limbossa, mutta se sislätää kuitenkin paljon muista genren pelisarjoista inspiraatiota saaneita lupaavia elementtejä. \
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi cupiditate voluptatum beatae et ipsam veritatis nemo ad temporibus  \
+         molestiae asperiores quo nostrum neque tempore, tenetur fugiat quos illum. Placeat magni repellendus recusandae nemo delectus eaque  \
+         voluptatibus libero, dolorem aut ullam. </p>\
+     <div class=\"embed-responsive embed-responsive-16by9\">\
+         <iframe class=\"embed-responsive-item\" src=\"https://www.youtube.com/embed/zBuxRGmPPC0\" allowfullscreen>\</iframe>\
+     </div>\
+ </div>\
+ <div class=\"jumbotron jumbotron-fluid alapalkki\">\
+     <div class=\"row\" id=\"some\">\
+         <a href=\"#\" id=\"twitter_logo\">\
+             <img src=\"Kuvat/alapalkki logot/twitter_harmaa60.png\">\
+         </a>\
+         <a href=\"#\" id=\"yt_logo\">\
+             <img src=\"Kuvat/alapalkki logot/youtube_harmaa60.png\">\
+         </a>\
+         <a href=\"#\" id=\"fb_logo\">\
+             <img src=\"Kuvat/alapalkki logot/fb_harmaa60.png\">\
+         </a>\
+     </div>\
+     <div class=\"row\" id=\"tekija\">\
+         <p class=\"text-center\" id=\"tekija\">\© 2019 Miikka Vartiainen</p>\
+     </div>\
+ </div>";
+	
+var yhtHTML ="<div class=\"container-fluid\" id=\"yht_bg\">\
+            <div class=\"jumbotron jumbotron-fluid\" id=\"yht_jumbotron\">\
+                <h1 id=\"yht_h1\" class=\"text-center\">\Yhteydenotto</h1>\
+                <p id=\"yhteystiedot\">\Mikäli haluat ottaa yhteyttä, voit tehdä sen alla olevalla lomakkeella tai ottamalla suoraan yhteyttä osoitteeseen <a href=\"#\">\EMAIL@EMAIL.COM</a>\
+                </p>\
+                <form id=\"contact-form\" method=\"post\" action=\"\" role=\"form\">\
+                        <div class=\"messages\">\</div>\
+                        <div class=\"controls\">\
+                            <div class=\"row\">\
+                                <div class=\"col-md-6\">\
+                                    <div class=\"form-group\">\
+                                        <label for=\"form_name\" id=\"label_name\">\Etunimi</label>\
+                                        <input id=\"form_name\" type=\"text\" name=\"name\" class=\"form-control\" placeholder=\"Syötä etunimesi tähän\" required=\"required\" data-error=\"\">\
+                                        <div class=\"help-block with-errors\">\</div>\
+                                    </div>\
+                                </div>\
+                                <div class=\"col-md-6\">\
+                                    <div class=\"form-group\">\
+                                        <label for=\"form_lastname\" id=\"label_lastname\">\Sukunimi</label>\
+                                        <input id=\"form_lastname\" type=\"text\" name=\"surname\" class=\"form-control\" placeholder=\"Syötä sukunimesi tähän\" required=\"required\" data-error=\"\">\
+                                        <div class=\"help-block with-errors\">\</div>\
+                                    </div>\
+                                </div>\
+                            </div>\
+                            <div class=\"row\">\
+                                <div class=\"col-md-6\">\
+                                    <div class=\"form-group\">\
+                                        <label for=\"form_email\" id=\"label_email\">\Sähköposti</label>\
+                                        <input id=\"form_email\" type=\"email\" name=\"email\" class=\"form-control\" placeholder=\"Syötä sähköpostiosoitteesi tähän\" required=\"required\" data-error=\"\">\
+                                        <div class=\"help-block with-errors\">\</div>\
+                                    </div>\
+                                </div>\
+                                <div class=\"col-md-6\">\
+                                </div>\
+                            </div>\
+                            <div class=\"row\">\
+                                <div class=\"col-md-12\">\
+                                    <div class=\"form-group\">\
+                                        <label for=\"form_message\" id=\"label_message\">\Viesti</label>\
+                                        <textarea id=\"form_message\" name=\"message\" class=\"form-control\" placeholder=\"Syötä viestisi tähän\" rows=\"4\" required=\"required\" data-error=\"\">\</textarea>\
+                                        <div class=\"help-block with-errors\">\</div>\
+                                    </div>\
+                                </div>\
+                                <div class=\"col-md-12\">\
+                                    <input type=\"submit\" class=\"btn btn-primary\" value=\"Lähetä viesti\">\
+                                </div>\
+                            </div>\
+                            <div class=\"row\">\
+                                <div class=\"col-md-12\">\
+                                </div>\
+                            </div>\
+                        </div>\
+                    </form>\
+                    <p id=\"yhteystiedot\">\Yllä olevan lomakkeen pohja on otettu osoitteesta https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form.</p>\
+            </div>\
+        </div>\
+        <div class=\"jumbotron jumbotron-fluid alapalkki\">\
+                <div class=\"row\" id=\"some\">\
+                    <a href=\"#\" id=\"twitter_logo\">\
+                        <img src=\"Kuvat/alapalkki logot/twitter_harmaa60.png\">\
+                    </a>\
+                    <a href=\"#\" id=\"yt_logo\">\
+                        <img src=\"Kuvat/alapalkki logot/youtube_harmaa60.png\">\
+                    </a>\
+                    <a href=\"#\" id=\"fb_logo\">\
+                        <img src=\"Kuvat/alapalkki logot/fb_harmaa60.png\">\
+                    </a>\
+                </div>\
+                <div class=\"row\" id=\"tekija\">\
+                    <p class=\"text-center\" id=\"tekija\">\© 2019 Miikka Vartiainen</p>\
+                </div>\
+            </div>\
+        </div>";
+	
+function LoadInitialContent(){
+    document.getElementById("content").innerHTML = indexHTML;
+}
+</script>
+
+<!--/JAVASCRIPT-->
+
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+

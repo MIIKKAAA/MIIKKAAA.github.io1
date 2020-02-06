@@ -1,0 +1,219 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  html *
+  {
+    font-family: 'Chivo'!important;
+  }
+
+.navbar{
+    background: #343a40;
+    opacity: 1;
+
+}
+
+.nav-link {
+    display: inline-block;
+    /*color: black!important;*/
+}
+#content{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+#header_logo{
+    padding-top: 2%;
+    max-height: 100%;
+    width: 100%;
+    size:cover;
+}
+#etusivu_header{
+    background-image: url("Kuvat/etusivu_logo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    margin-bottom: 0;
+}
+#container_kortit{
+    padding-top:2%;
+    margin-bottom:2%;
+}
+.card{
+    background-color: #e4e4e4;
+    margin: 1%;
+}
+
+#korttikuvake{
+    outline: none;
+}
+
+.alapalkki{
+    background-color: rgb(66, 66, 66);
+    margin-bottom: 0;
+}
+
+#tekija{
+    color: lightgrey;
+    font-size:100%;
+}
+
+#twitter_logo, #yt_logo, #fb_logo{
+    margin-left: 0.3%;
+    margin-right: 0.3%;
+    outline: none;
+}
+
+#some{
+    justify-content:center;
+    margin-left:0;
+    margin-right:0;
+}
+#tekija{
+    margin-left:0;
+    margin-right:0;
+    justify-content:center;
+}
+
+#tietoa_jumbo{
+    margin:auto;
+}
+
+#tietoa_poe, #tietoa_historia, #tietoa_miksipelata, #tietoa_lataaminen, #tietoa_artikkeleja, 
+#etusivu_info, #resurssit_wiki, #resurssit_reddit, #resurssit_virallinen_sivusto, #resurssit_virallinen_trade,
+#resurssit_wiki, #resurssit_poeninja, #resurssit_poedb, #arpg_d3, #arpg_gd, #arpg_wolcen {
+    padding-top:2%;
+    padding-bottom:2%;
+    margin-top:0;
+    margin-bottom:0;
+    padding-left: 25%;
+    padding-right: 25%;  
+}
+
+
+#tietoa_historia, #etusivu_info, #tietoa_lataaminen{
+    background-color: white;
+}
+
+
+#resurssit_wiki, #resurssit_reddit, #resurssit_virallinen_sivusto, #resurssit_virallinen_trade, #resurssit_poeninja, #resurssit_poedb, #arpg_d3, #arpg_wolcen, #arpg_gd {
+    margin-right: 0;
+
+    padding-left: 25%;
+    padding-right: 25%;  
+}
+#resurssit_wiki, #resurssit_virallinen_sivusto, #resurssit_poeninja, #arpg_wolcen{
+    padding-top: 1%;
+}
+
+#resurssit_reddit, #resurssit_virallinen_trade, #resurssit_poedb, #arpg_gd{
+    background-color: white;
+}
+
+#uutiskortti{
+    width:100%;
+}
+#uutiset_otsikko{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+
+#arpg_wolcen, #arpg_d3, #arpg_gd{
+    margin-bottom:0;
+    margin-top:0;
+}
+
+#yht_bg{
+    background: url("Kuvat/templar_bg.jpg") no-repeat center center fixed;
+     background-size: cover;
+     max-width:100%;
+   }
+   
+
+#yht_jumbotron{
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-bottom:0;
+    padding-top:6%;
+    padding-bottom: 0%;
+    padding-left: 1%;
+    padding-right: 1%;  
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.596)
+}
+
+#yhteystiedot{
+    color:white;
+    padding-bottom: 4%;
+    padding-top:3%;
+}
+#yht_h1{
+    color:white;
+    padding-top:3%;
+
+}
+#label_name, #label_lastname, #label_email, #label_message{
+    color:white;
+}
+
+.btn-primary{
+    background-color: #fcc25d;
+    color: black;
+    border-color:#4c3327;
+}
+.btn-primary:hover{
+    background-color: #fcc25d!important;
+    color:black!important;
+    border-color:red;
+}
+.btn-primary:active{
+    background-color: #ffeed2!important;
+    color: black!important;
+    border-color:#4c3327;
+}
+@media (max-width: 978px) {
+    #tietoa_poe, #tietoa_historia, #tietoa_miksipelata, #tietoa_lataaminen, #tietoa_artikkeleja, 
+    #etusivu_info, #resurssit_wiki, #resurssit_reddit, #resurssit_virallinen_sivusto, #resurssit_virallinen_trade,
+    #resurssit_wiki, #resurssit_poeninja, #resurssit_poedb, #arpg_d3, #arpg_gd, #arpg_wolcen {
+        padding-top:2%;
+        padding-bottom:2%;
+        margin-top:0;
+        margin-bottom:0;
+        padding-left: 3%;
+        padding-right: 3%;  
+    }
+    #yht_jumbotron{
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-top: 4%;
+        padding-bottom: 0%;
+        padding-left: 0%;
+        padding-right: 0%;  
+        height: 100%;
+        background: rgba(0, 0, 0, 0.596)
+    }
+    #header_logo{
+        padding-top: 5%;
+    }
+    .card{
+        background-color: #e4e4e4;
+        margin: 3%;
+    }
+
+}
+
+@media (max-width: 576px) {
+    #header_logo{
+      padding-top: 10%;
+    }
+    #yht_jumbotron{
+        margin-top: 12%;
+    }
+    .card{
+        background-color: #e4e4e4;
+        margin: 5%;
+    }
+}
